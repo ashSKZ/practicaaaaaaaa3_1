@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 1.4em;
+    color: rgb(106, 11, 68);
+}
+
+h3 {
+    font-size: 0.8em;
+    color: rgb(106, 11, 25);
+}
+
+h4 {
+    font-size: 0.9em;
+}
+
+p {
+    font-size: 0.8em;
+}
+
+button {
+    font-size: 0.7em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid rgb(223, 54, 113);
+    box-shadow: 2px 2px 10px rgb(133, 32, 60);
+    color: white;
+    background-color: rgb(167, 31, 77);
+}
+
+button:hover {
+    background-color: rgb(132, 20, 106);
+}
+
+.cuadros:hover {
+    background-color: rgba(226, 75, 83, 0.5);
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+header {
+    background-color: rgb(196, 57, 96);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .cabezaa {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 6px 6px;
+    background-color: rgb(163, 27, 65);
+}
+
+
+header .image-container {
+    width: 88px;
+    height: 88px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+header .logo {
+    font-weight: bold;
+    color: rgb(227, 137, 176);
+    font-size: 3.4em;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1px 3px;
+    font-size: 0.8em;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: rgb(196, 57, 96);
+    z-index: 1000;
+}
+
+header a {
+    padding: 5px 2px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(238, 187, 209);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header a:hover {
+    color: rgb(192, 43, 226);
+}
+
+body .nosotros, .comprar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: rgb(254, 132, 143);
+}
+
+body .gomitas, .papas, .chocolates {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+}
+
+body .gomitas {
+    background-image: linear-gradient(
+        0deg,
+        rgba(240, 235, 235, 0.2),
+        rgba(237, 230, 230, 0.2)
+    ), url('media/chicles.jpg'); 
+}
+
+body .papas {
+    background-image: linear-gradient(
+        0deg,
+        rgba(240, 235, 235, 0.2),
+        rgba(237, 230, 230, 0.2)
+    ), url('media/papas.jpg'); 
+}
+
+body .chocolates {
+    background-image: linear-gradient(
+        0deg,
+        rgba(240, 235, 235, 0.3),
+        rgba(237, 230, 230, 0.3)
+    ), url('media/choco.jpg'); 
+}
+
+.image-container {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cuadros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    background-color: rgba(226, 49, 111, 0.5);
+    padding: 4%;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px; 
+    height: 400px; 
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px; 
+}
+
+footer {
+    background-color: rgb(191, 64, 74);
+    margin: 0;
+    padding: 0;
+}
+
+
+@media (min-width: 720px) {
+    .gomitas .cuadradotes,
+    .papas .cuadradotes,
+    .chocolates .cuadradotes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .gomitas .cuadros,
+    .papas .cuadros,
+    .chocolates .cuadros {
+        flex: 1 1 calc(50% - 20px); 
+        margin: 10px;
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .gomitas .cuadradotes,
+    .papas .cuadradotes,
+    .chocolates .cuadradotes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .gomitas .cuadros,
+    .papas .cuadros,
+    .chocolates .cuadros {
+        flex: 1 1 calc(33.33% - 20px); 
+        margin: 10px;
+        max-width: calc(33.33% - 20px);
+    }
+}
